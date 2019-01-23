@@ -5,14 +5,14 @@ check_exit_status() {
 	if [ $? -eq 0 ]
 	then
 		echo
-		echo "Success"
+		echo "SUCCESSFUL UPDATE"
 		echo
 	else
 		echo
-		echo "[ERROR] Process Failed!"
+		echo "[ERROR] UPDATE PROCESS FAILED"
 		echo
 		
-		read -p "The last command exited with an error. Exit script? (yes/no) " answer
+		read -p "UPDATE PROCESS FAILED, EXIT SCRIPT? (YES/NO) " answer
 
             if [ "$answer" == "yes" ]
             then
@@ -24,7 +24,7 @@ check_exit_status() {
 greeting() {
 
 	echo
-	echo "Hello, $USER. Let's update this system."
+	echo "==SYSTEM UPDATE IN PROGRESS $USER=="
 	echo
 }
 
@@ -56,7 +56,7 @@ leave() {
 
 	echo
 	echo "--------------------"
-	echo "- Update Complete! -"
+	echo "- UPDATE COMPLETED! -"
 	echo "--------------------"
 	echo
 	exit
